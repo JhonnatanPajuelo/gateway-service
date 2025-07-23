@@ -1,0 +1,12 @@
+services:
+  gateway:
+    image: gateway-image:v1
+    container_name: gateway
+    ports:
+      - "9090:9090"
+    networks:
+      - micro-net
+
+networks:
+  micro-net:
+    external: true
